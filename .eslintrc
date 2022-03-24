@@ -1,5 +1,16 @@
 {
-  "extends": "standard-with-typescript",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "react"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -16,6 +27,8 @@
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-base-to-string": "off",
     "@typescript-eslint/camelcase": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "node/no-path-concat": "off",
     "import/export": "off"
   }
