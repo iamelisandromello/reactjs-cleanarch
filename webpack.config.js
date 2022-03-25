@@ -21,7 +21,7 @@ module.exports = {
       loader: 'ts-loader',
       exclude: /node_modules/
     }, {
-      test: /\.$/,
+      test: /\.scss$/,
       use: [{
         loader: 'style-loader'
       }, {
@@ -35,9 +35,14 @@ module.exports = {
     }]
   },
   devServer: {
-    contentBase: './public',
-    writeToDisk: true,
-    historyApiFallback: true
+    devMiddleware: {
+      writeToDisk: true
+    },
+    static: {
+      directory: './public'
+    },
+    historyApiFallback: true,
+    port: 8080
   },
   externals: {
     react: 'React',
