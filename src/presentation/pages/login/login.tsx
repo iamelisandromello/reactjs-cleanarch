@@ -1,22 +1,20 @@
 import React from 'react'
 import Styles from './login-styles.scss'
+import { Header, InputBase, Footer } from '@/presentation/components'
 
 const login: React.FC = () => {
   return (
-    <div className={Styles.loginWrap}>
-      <div className={Styles.login}>
-        <header className={Styles.header}>
-          <img src=''/>
-          <h1>Dev - Adventures Login</h1>
-        </header>
-        <form className={Styles.form}>
-          <h2>Login</h2>
-          <input type="email" name='email' placeholder='Digite seu e-mail' />
-          <input type="password" name='password' placeholder='Digite sua senha' />
-          <button>Entrar</button>
-        </form>
-        <footer className={Styles.footer}></footer>
-      </div>
+    <div className={Styles.login}>
+      <Header />
+      <form className={Styles.form}>
+        <h2>Login</h2>
+        <InputBase type="email" name='email' placeholder='Digite seu e-mail' />
+        <InputBase type="password" name='password' placeholder='Digite sua senha' />
+
+        <button className={Styles.submit} >Entrar</button>
+        <span className={Styles.link}>Criar conta</span>
+      </form>
+      <Footer />
     </div>
   )
 }
